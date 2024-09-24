@@ -6,9 +6,26 @@
 
 
     <VerticalStackLayout
-        Padding="10"
-        Spacing="0">
-        
+        Padding="30,0"
+        VerticalOptions="Fill">
+
+        <HorizontalStackLayout>
+
+            <VerticalStackLayout
+                Padding="30,30">    
+
+                <Label Text="Bill" />
+              
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                Padding="70,20">
+
+                <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
+
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
         <HorizontalStackLayout
             Padding="30,0">
 
@@ -16,7 +33,6 @@
                 Padding="0"
                 Spacing="0">
 
-                <Label Text="Bill" />
                 <Label Text="Tip"   />
                 <Label Text="Total" />
                 <Label Text="Tip Percentage" />
@@ -25,9 +41,8 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout
-                Spacing="0">
+                Padding="30,0">
 
-                <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
                 <Label x:Name="tipOutput" Text="0.00" />
                 <Label x:Name="totalOutput" Text="0.00" />
                 <Label x:Name="tipPercent" Text="15%" />
@@ -39,20 +54,24 @@
         <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" />
 
         <HorizontalStackLayout
-            Padding="30,0">
+            >
             
-            <VerticalStackLayout>
+            <VerticalStackLayout
+                Spacing="20"
+                Padding="30,20">
 
-                <Button Text="15%" Clicked="OnNormalTip" />
-                <Button x:Name="roundDown" Text="Round Down" />
+                <Button Text="15%" Clicked="OnNormalTip" Scale="1.2" />
+                <Button x:Name="roundDown" Text="Round Down" Scale="1.2" />
                 
 
             </VerticalStackLayout>
 
-            <VerticalStackLayout>
+            <VerticalStackLayout
+                Spacing="20"
+                Padding="0,20">
 
-                <Button Text="20%" Clicked="OnGenerousTip" />
-                <Button x:Name="roundUp"   Text="Round Up" />
+                <Button Text="20%" Clicked="OnGenerousTip" Scale="1.2" />
+                <Button x:Name="roundUp"   Text="Round Up" Scale="1.2" />
 
             </VerticalStackLayout>
             
